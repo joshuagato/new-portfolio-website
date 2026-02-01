@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, PhoneCallIcon, MailsIcon } from "lucide-react";
+import { Github, Linkedin, Twitter, PhoneCallIcon, MailsIcon, Mail, MapPin, Phone } from "lucide-react";
 
 export const socialLinks = [
     {icon: MailsIcon, href: "mailTo:joshuagato37@gmail.com", label: "Email"},
@@ -18,3 +18,11 @@ export const headerAndFooterLinks = [
 ];
 
 export const myFullName = "Joshua Gato";
+
+export const contactInfo = [{
+    icon: Mail, label: "Email", value: "joshuagato37@gmail.com", href: "mailto:joshuagato37@gmail.com",
+}, {
+    icon: Phone, label: "Phone", value: "+233 (278) 22-38-38", href: "tel:+233278223838",
+}, {
+    icon: MapPin, label: "Location", value: "Accra, Ghana", href: "#",
+},];
