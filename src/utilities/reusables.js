@@ -26,3 +26,8 @@ export const contactInfo = [{
 }, {
     icon: MapPin, label: "Location", value: "Accra, Ghana", href: "#",
 },];
+
+export const skills = ["React", "Next.js", "Vue", "Nuxt.js", "TypeScript", "Node.js", "Laravel", "Django",
+    "GraphQL", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS", "Vercel", "Tailwind CSS", "Prisma", "Jest", "Cypress",
+    "Figma", "Git", "GitHub Actions"
+];
