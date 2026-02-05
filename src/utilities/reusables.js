@@ -1,12 +1,14 @@
-import { Github, Linkedin, Twitter, PhoneCallIcon, MailsIcon, Mail, MapPin, Phone } from "lucide-react";
+import WhatsApp from '../../public/whatsapp.svg';
+import { Github, Linkedin, Twitter, PhoneCallIcon, MailsIcon, Mail, MapPin, Phone, Facebook } from "lucide-react";
 
 export const socialLinks = [
     {icon: MailsIcon, href: "mailTo:joshuagato37@gmail.com", label: "Email"},
     {icon: PhoneCallIcon, href: "tel: +233278223838", label: "Call"},
-    {icon: PhoneCallIcon, href: "https://api.whatsapp.com/send/?phone=233278223838&text&type=phone_number&app_absent=0", label: "WhatsApp"},
+    {icon: WhatsApp, href: "https://api.whatsapp.com/send/?phone=233278223838&text&type=phone_number&app_absent=0", label: "WhatsApp"},
     {icon: Github, href: "https://github.com/joshuagato", label: "GitHub"},
     {icon: Linkedin, href: "https://www.linkedin.com/in/joshuagato", label: "LinkedIn"},
     {icon: Twitter, href: "https://x.com/JoshuaGato5", label: "Twitter"},
+    {icon: Facebook, href: "https://web.facebook.com/joshua.gato.5074/", label: "Facebook"},
 ];
 
 export const headerAndFooterLinks = [
