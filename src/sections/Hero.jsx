@@ -1,10 +1,11 @@
 import {Button} from "@/components/Button";
 import {
-    ArrowRight, ChevronDown, Github, Linkedin, Twitter, Download,
+    ArrowRight, ChevronDown, Github, Linkedin, Twitter, Download, PhoneCall, PhoneCallIcon
 } from "lucide-react";
-import {AnimatedBorderButton} from "../components/AnimatedBorderButton";
+import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
+import { socialLinks, skills } from '../utilities/reusables.js';
 
-const skills = ["React", "Next.js", "TypeScript", "Node.js", "GraphQL", "PostgreSQL", "MongoDB", "Redis", "Docker", "AWS", "Vercel", "Tailwind CSS", "Prisma", "Jest", "Cypress", "Figma", "Git", "GitHub Actions",];
+
 
 export const Hero = () => {
     return (<section className="relative min-h-screen flex items-center overflow-hidden">
@@ -20,7 +21,7 @@ export const Hero = () => {
 
         {/* Green Dots */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {[...Array(30)].map((_, i) => (<div
+            {[...Array(40)].map((_, i) => (<div
                 className="absolute w-1.5 h-1.5 rounded-full opacity-60"
                 style={{
                     backgroundColor: "#20B2A6",
@@ -57,8 +58,8 @@ export const Hero = () => {
                         </h1>
                         <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                             Hi there, I'm Joshua Gato — a software engineer specializing in
-                            React, Next.js, Vue, Nuxt.js, Node, Nest.js, Laravel, Django, etc. I build scalable, performant web
-                            applications that users love.
+                            React, Next.js, Vue, Nuxt.js, Node, Nest.js, Laravel, Django, etc. I build scalable,
+                            performant web applications that users love.
                         </p>
                     </div>
 
@@ -67,20 +68,23 @@ export const Hero = () => {
                         <Button size="lg">
                             Contact Me <ArrowRight className="w-5 h-5"/>
                         </Button>
-                        <AnimatedBorderButton>
-                            <Download className="w-5 h-5"/>
-                            Download CV
-                        </AnimatedBorderButton>
+                        <a target={"_blank"}
+                           href={"https://drive.google.com/file/d/1jM1Isiefj5oiYwEmPByM9vzUAwkl1Jmb/view?usp=drive_link"}>
+                            <AnimatedBorderButton>
+                                <Download className="w-5 h-5"/>
+                                Download CV
+                            </AnimatedBorderButton>
+                        </a>
                     </div>
 
                     {/* Social Links */}
                     <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
-                        <span className="text-sm text-muted-foreground">Follow me: </span>
-                        {[{icon: Github, href: "#"}, {icon: Linkedin, href: "#"}, {
-                            icon: Twitter, href: "#"
-                        },].map((social, idx) => (<a
+                        <span className="text-sm text-muted-foreground"></span>
+                        {socialLinks.map((social, idx) => (<a
+                            target={"_blank"}
                             key={idx}
                             href={social.href}
+                            title={social.label}
                             className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                         >
                             {<social.icon className="w-5 h-5"/>}
@@ -99,8 +103,8 @@ export const Hero = () => {
                         />
                         <div className="relative glass rounded-3xl p-2 glow-border">
                             <img
-                                src="/profile-photo2.jpeg"
-                                alt="Pedro Machado"
+                                src="/profile-photo.png"
+                                alt="Joshua Gato"
                                 className="w-full aspect-[4/5] object-contain rounded-2xl"
                             />
 
