@@ -1,8 +1,7 @@
 {
-  "name": "dev-personal-portfolio",
+  "name": "Joshua Gato | Portfolio Website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://joshuagato.github.io/new-portfolio-website",
   "type": "module",
   "scripts": {
     "dev": "vite",
