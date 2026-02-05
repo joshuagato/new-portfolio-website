@@ -1,10 +1,7 @@
 import {Button} from "@/components/Button";
-import {
-    ArrowRight, ChevronDown, Github, Linkedin, Twitter, Download, PhoneCall, PhoneCallIcon
-} from "lucide-react";
-import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
-import { socialLinks, skills } from '../utilities/reusables.js';
-
+import {ArrowRight, ChevronDown, Download} from "lucide-react";
+import {AnimatedBorderButton} from "../components/AnimatedBorderButton";
+import {skills, socialLinks} from '../utilities/reusables.js';
 
 
 export const Hero = () => {
@@ -65,9 +62,11 @@ export const Hero = () => {
 
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <Button size="lg">
-                            Contact Me <ArrowRight className="w-5 h-5"/>
-                        </Button>
+                        <a target={'_blank'} href="mailTo:joshuagato37@gmail.com">
+                            <Button size="lg">
+                                Email Me <ArrowRight className="w-5 h-5"/>
+                            </Button>
+                        </a>
                         <a target={"_blank"}
                            href={"https://drive.google.com/file/d/1jM1Isiefj5oiYwEmPByM9vzUAwkl1Jmb/view?usp=drive_link"}>
                             <AnimatedBorderButton>
@@ -87,15 +86,11 @@ export const Hero = () => {
                             title={social.label}
                             className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                         >
-                            {social.label === "WhatsApp" ? (
-                                <img
-                                    src={social.icon.src || social.icon}
-                                    alt={social.label}
-                                    className="w-5 h-5 object-contain"
-                                />
-                            ) : (
-                                <social.icon className="w-5 h-5" />
-                            )}
+                            {social.label === "WhatsApp" ? (<img
+                                src={social.icon.src || social.icon}
+                                alt={social.label}
+                                className="w-5 h-5 object-contain"
+                            />) : (<social.icon className="w-5 h-5"/>)}
                         </a>))}
                     </div>
                 </div>
