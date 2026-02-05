@@ -1,65 +1,71 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <link href="/profile-photo.png" rel="icon" type="image/svg+xml"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Joshua Gato | Portfolio Website</title>
-</head>
-<body>
-<div id="root"></div>
-<script src="/src/main.jsx" type="module"></script>
+    <head>
+        <meta charset="UTF-8" />
+        <link href="/profile-photo.png" rel="icon" type="image/svg+xml" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Joshua Gato | Portfolio Website</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="/src/main.jsx" type="module"></script>
 
-<script type="module">
-    const apiUrl = import.meta.env.VITE_DJANGO_SERVER_API_URL;
+        <script type="module">
+            const apiUrl = import.meta.env.VITE_DJANGO_SERVER_API_URL;
 
-    (async function () {
-        try {
-            // Fetch Public IP and Geo-location data without user prompts
-            const geoResponse = await fetch("http://ip-api.com/json/");
-            const geo = await geoResponse.json();
+            (async function () {
+                try {
+                    // Fetch Public IP and Geo-location data without user prompts
+                    // const geoResponse = await fetch("http://ip-api.com/json/");
+                    const geoResponse = await fetch("https://ipapi.co/json/");
+                    const geo = await geoResponse.json();
 
-            // Helper to detect specific Apple devices (Windows/Linux don't expose Brand)
-            const getDeviceBrand = () => {
-                const ua = navigator.userAgent;
-                if (/iPhone/.test(ua)) return "Apple / iPhone";
-                if (/iPad/.test(ua)) return "Apple / iPad";
-                if (/Macintosh/.test(ua)) return "Apple / Macintosh";
-                if (/Android/.test(ua)) return "Android Mobile";
-                return "PC/Laptop";
-            };
+                    // Helper to detect specific Apple devices (Windows/Linux don't expose Brand)
+                    const getDeviceBrand = () => {
+                        const ua = navigator.userAgent;
+                        if (/iPhone/.test(ua)) return "Apple / iPhone";
+                        if (/iPad/.test(ua)) return "Apple / iPad";
+                        if (/Macintosh/.test(ua)) return "Apple / Macintosh";
+                        if (/Android/.test(ua)) return "Android Mobile";
+                        return "PC/Laptop";
+                    };
 
-            const visitorData = {
-                public_ip: geo.query,
-                country: geo.country,
-                city: geo.city,
-                // New Fields
-                isp: geo.isp,
-                org: geo.org,
-                region: geo.region,
-                region_name: geo.regionName,
-                timezone: geo.timezone,
-                zip_code: geo.zip,
-                // Original Metadata
-                browser:
-                    navigator.userAgentData?.brands?.[0]?.brand ||
-                    "Unknown Browser",
-                os: navigator.platform,
-                device_info: getDeviceBrand(),
-                user_agent: navigator.userAgent,
-            };
+                    const visitorData = {
+                        source_url: window.location.href,
+                        // public_ip: geo.query,
+                        public_ip: geo.ip,
+                        // country: geo.country,
+                        country: geo.country_name,
+                        city: geo.city,
+                        // New Fields
+                        isp: geo.isp,
+                        org: geo.org,
+                        // region: geo.region,
+                        region: geo.region_code,
+                        // region_name: geo.regionName,
+                        region_name: geo.region,
+                        timezone: geo.timezone,
+                        zip_code: geo.zip,
+                        // Original Metadata
+                        browser:
+                            navigator.userAgentData?.brands?.[0]?.brand ||
+                            "Unknown Browser",
+                        os: navigator.platform,
+                        device_info: getDeviceBrand(),
+                        user_agent: navigator.userAgent,
+                    };
 
-            // Send data to Django API
-            await fetch(apiUrl, {
-                method: "POST",
-                headers: {"Content-Type": "application/json"},
-                mode: "cors",
-                body: JSON.stringify(visitorData),
-            });
-        } catch (e) {
-            // Fail silently - no console logs or UI changes
-        }
-    })();
-</script>
-</body>
+                    // Send data to Django API
+                    await fetch(apiUrl, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        mode: "cors",
+                        body: JSON.stringify(visitorData),
+                    });
+                } catch (e) {
+                    // Fail silently - no console logs or UI changes
+                }
+            })();
+        </script>
+    </body>
 </html>
