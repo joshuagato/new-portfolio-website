@@ -38,7 +38,15 @@ export const Footer = () => {
                                 title={social.label}
                                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
                             >
-                                <social.icon className="w-5 h-5"/>
+                            {social.label === "WhatsApp" ? (
+                                <img
+                                    src={social.icon.src || social.icon}
+                                    alt={social.label}
+                                    className="w-5 h-5 object-contain"
+                                />
+                            ) : (
+                                <social.icon className="w-5 h-5" />
+                            )}
                             </a>))}
                     </div>
                 </div>
