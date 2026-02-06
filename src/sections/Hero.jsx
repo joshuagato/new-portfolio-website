@@ -62,9 +62,9 @@ export const Hero = () => {
 
                     {/* CTAs */}
                     <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-                        <a target={'_blank'} href="mailTo:joshuagato37@gmail.com">
+                        <a target={'_blank'} href="https://api.whatsapp.com/send/?phone=233278223838&text&type=phone_number&app_absent=0">
                             <Button size="lg">
-                                Email Me <ArrowRight className="w-5 h-5"/>
+                                WhatsApp Me <ArrowRight className="w-5 h-5"/>
                             </Button>
                         </a>
                         <a target={"_blank"}
