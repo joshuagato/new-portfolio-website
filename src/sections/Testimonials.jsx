@@ -2,6 +2,35 @@ import {ChevronLeft, ChevronRight, Quote} from "lucide-react";
 import {useState} from "react";
 
 const testimonials = [{
+    quote: "I had the pleasure of working with Joshua Gato while I was a junior software engineer, and " +
+        "I can confidently say he is one of the most dependable and supportive engineers I’ve worked with. " +
+        "Joshua was always respectful, approachable, and incredibly patient. He made complex concepts easy " +
+        "to understand and took the time to break down tasks step by step, helping me clearly see where to " +
+        "begin and how to move forward.\n" +
+        "He was always available whenever I needed guidance, no matter the time, and his tolerance and willingness " +
+        "to help made him feel more like a brother than just a colleague. Joshua is someone you can truly rely on " +
+        "when results are needed, he shows up, collaborates effectively, and gets the job done. He creates a " +
+        "positive working environment, and it’s genuinely impossible to dislike working with him.\n" +
+        "I highly recommend Joshua to any team looking for a skilled, collaborative, and reliable software engineer.",
+    author: "Frank Paintsil",
+    role: "Software Engineer, Riskspot",
+    avatar: "/frank.jpeg",
+}, {
+    quote: "I’ve had the pleasure of working with Joshua at Talent Co-op, where I experienced " +
+        "firsthand his T-shaped skillset—broad knowledge across technologies and deep expertise in " +
+        "TypeScript, React, Node.js, NestJS, PostgreSQL, MongoDB, microservices, REST & GraphQL APIs, CI/CD, " +
+        "GitHub Actions, and database design. Working with him, I saw how he can design scalable systems, " +
+        "implement complex features, and build responsive, maintainable applications efficiently.\n" +
+        "\n" +
+        "Joshua collaborates seamlessly with teams, adapts quickly to new technologies, and consistently " +
+        "delivers high-quality, practical solutions. Any team would benefit greatly from his advanced " +
+        "technical skills and versatility.\n" +
+        "\n" +
+        "\n",
+    author: "David Efui Yevu",
+    role: "Full Stack Engineer, Talent Co-op",
+    avatar: "/david.jpeg",
+}, {
     quote: "I had the pleasure of working alongside Joshua Gato at Riskspot.io, a Ghana-based cybersecurity SaaS platform dedicated to reducing human cyber risk and building resilience in businesses . As a back-end developer, Joshua played a pivotal role in developing and refining our platform's features, which include threat simulation, detection and management, and vulnerability assessment . \n" + "\n" + "Joshua's deep understanding of back-end technologies was instrumental in delivering a user-friendly experience that empowers employees to become cybersecurity champions . \n" + "\n" + "Beyond his technical expertise, Joshua has a remarkable ability to demystify complex back-end concepts. His patient guidance significantly enhanced my understanding of our platform's architecture and functionality.\n" + "\n" + "Joshua's collaborative spirit and dedication to excellence make him an invaluable asset to any team. I wholeheartedly recommend him and am confident that his contributions will drive success in any endeavor he undertakes.\n" + "\n" + "\n",
     author: "Redeemer Dugbazah",
     role: "Frontend Engineer, Riskspot",
