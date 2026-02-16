@@ -46,7 +46,7 @@ export const About = () => {
                                 excellence with a strong background in UI/UX implementation, frequently converting
                                 complex Figma designs into interactive, user-centric interfaces. Beyond frontend
                                 excellence, I have a proven track record in DevOps and infrastructure, managing
-                                deployments on AWS, Azure, and Digital Ocean, and automating critical backend processes
+                                deployments on Amazon Web Services, Microsoft Azure, Oracle Cloud, and Digital Ocean, and automating critical backend processes
                                 to ensure system reliability.
                             </p>
                             <p>
