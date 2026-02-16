@@ -83,7 +83,7 @@ export const Testimonials = () => {
                 </div>
 
                 {/* Testimonial Carousel */}
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-6xl mx-auto">
                     <div className="relative">
                         {/* Main Testimonial */}
                         <div className="glass p-8 rounded-3xl md:p-12 glow-border animate-fade-in animation-delay-200">
@@ -92,11 +92,11 @@ export const Testimonials = () => {
                                 <Quote className="w-6 h-6 text-primary-foreground"/>
                             </div>
 
-                            <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4">
+                            <blockquote className="text-sm md:text-xl font-medium leading-relaxed mb-8 pt-4">
                                 "{testimonials[activeIdx].quote}"
                             </blockquote>
 
-                            <div className="flex items-center gap-4">
+                            <div className="flex items-center justify-center gap-4">
                                 <img
                                     src={testimonials[activeIdx].avatar}
                                     alt={testimonials[activeIdx].author}
