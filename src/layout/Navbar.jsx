@@ -1,7 +1,7 @@
 import {Button} from "@/components/Button";
-import {Menu, X} from "lucide-react";
+import {Download, Menu, X} from "lucide-react";
 import {useEffect, useState} from "react";
-import {headerAndFooterLinks} from "@/utilities/reusables.js";
+import {headerAndFooterLinks, PhoneCallIconExport} from "@/utilities/reusables.js";
 
 
 export const Navbar = () => {
@@ -23,7 +23,7 @@ export const Navbar = () => {
     >
         <nav className="container mx-auto px-6 flex items-center justify-between">
             <a
-                href="#"
+                href="/"
                 className="text-xl font-bold tracking-tight hover:text-primary"
             >
                 JG<span className="text-primary">.</span>
@@ -33,9 +33,14 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center gap-1">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {headerAndFooterLinks.map((link, index) => (<a
+                        target={link.label === 'Old Portfolio' ? "_blank" : ''}
                         href={link.href}
                         key={index}
-                        className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-full hover:bg-surface"
+                        className={`px-4 py-2 text-sm rounded-full hover:bg-surface transition-colors ${
+                            link.label === 'Old Portfolio'
+                                ? "text-red-500 hover:text-red-600"
+                                : "text-muted-foreground hover:text-foreground"
+                        }`}
                     >
                         {link.label}
                     </a>))}
@@ -45,7 +50,9 @@ export const Navbar = () => {
             {/* CTA Button */}
             <div className="hidden md:block">
                 <a target={'_blank'} href="tel: +233278223838">
-                    <Button size="sm">Call Me</Button>
+                    <Button size="sm">
+                        Call Me <PhoneCallIconExport className="w-4 h-4"/>
+                    </Button>
 
                 </a>
             </div>
@@ -68,7 +75,12 @@ export const Navbar = () => {
                     href={link.href}
                     key={index}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-lg text-muted-foreground hover:text-foreground py-2"
+                    target={link.label === 'Old Portfolio' ? "_blank" : ''}
+                    className={`px-4 py-2 text-lg rounded-full hover:bg-surface transition-colors ${
+                        link.label === 'Old Portfolio'
+                            ? "text-red-500 hover:text-red-600"
+                            : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                     {link.label}
                 </a>))}
