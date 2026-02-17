@@ -55,14 +55,15 @@ export const Contact = () => {
         <div className="container mx-auto px-6 relative z-10">
             {/* Section Header */}
             <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
-            Get In Touch
-          </span>
+                <span
+                    className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
+                    Get In Touch
+                </span>
                 <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
                     Let's build{" "}
                     <span className="font-serif italic font-normal text-white">
-              something great.
-            </span>
+                  something great.
+                </span>
                 </h2>
                 <p className="text-muted-foreground animate-fade-in animation-delay-200">
                     Have a project in mind? I'd love to hear about it. Send me a message
@@ -71,6 +72,8 @@ export const Contact = () => {
             </div>
 
             <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+
+                {/* Contact Me Form */}
                 <div className="glass p-8 rounded-3xl border border-primary/30 animate-fade-in animation-delay-300">
                     <form className="space-y-6" onSubmit={handleSubmit}>
                         <div>
@@ -109,10 +112,7 @@ export const Contact = () => {
                         </div>
 
                         <div>
-                            <label
-                                htmlFor="message"
-                                className="block text-sm font-medium mb-2"
-                            >
+                            <label htmlFor="message" className="block text-sm font-medium mb-2">
                                 Message
                             </label>
                             <textarea
@@ -138,8 +138,9 @@ export const Contact = () => {
                         </Button>
 
                         {submitStatus.type && (<div
-                            className={`flex items-center gap-3
-                     p-4 rounded-xl ${submitStatus.type === "success" ? "bg-green-500/10 border border-green-500/20 text-green-400" : "bg-red-500/10 border border-red-500/20 text-red-400"}`}
+                            className={`flex items-center gap-3 p-4 rounded-xl 
+                            ${submitStatus.type === "success" ? "bg-green-500/10 border border-green-500/20 text-green-400" :
+                                "bg-red-500/10 border border-red-500/20 text-red-400"}`}
                         >
                             {submitStatus.type === "success" ? (<CheckCircle className="w-5 h-5 flex-shrink-0"/>) : (
                                 <AlertCircle className="w-5 h-5 flex-shrink-0"/>)}
@@ -159,17 +160,17 @@ export const Contact = () => {
                                 key={i}
                                 href={item.href}
                                 target={item.href !== '#' && '_blank'}
-                                className="flex items-center gap-4 p-4 rounded-xl hover:bg-surface transition-colors group"
+                                className="flex items-center gap-3 p-3 rounded-xl hover:bg-surface transition-colors group"
                             >
                                 <div
-                                    className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                                    className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                                     <item.icon className="w-5 h-5 text-primary"/>
                                 </div>
-                                <div>
-                                    <div className="text-sm text-muted-foreground">
+                                <div className="min-w-0 overflow-hidden">
+                                    <div className="text-xs md:text-sm text-muted-foreground">
                                         {item.label}
                                     </div>
-                                    <div className="font-medium">{item.value}</div>
+                                    <div className="font-medium text-sm md:text-base truncate">{item.value}</div>
                                 </div>
                             </a>))}
                         </div>
