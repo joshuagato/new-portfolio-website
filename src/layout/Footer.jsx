@@ -19,13 +19,18 @@ export const Footer = () => {
 
                     {/* Links */}
                     <nav className="flex flex-wrap justify-center gap-6">
-                        {headerAndFooterLinks.map((link) => (<a
-                                key={link.href}
-                                href={link.href}
-                                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                            >
-                                {link.label}
-                            </a>))}
+                        {headerAndFooterLinks.map((link, index) => (<a
+                            target={link.label === 'Old Portfolio' ? "_blank" : ''}
+                            href={link.href}
+                            key={index}
+                            className={`px-4 py-2 text-sm rounded-full hover:bg-surface transition-colors ${
+                                link.label === 'Old Portfolio'
+                                    ? "text-red-500 hover:text-red-600"
+                                    : "text-muted-foreground hover:text-foreground"
+                            }`}
+                        >
+                            {link.label}
+                        </a>))}
                     </nav>
 
                     {/* Social Links */}
