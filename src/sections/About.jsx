@@ -33,23 +33,23 @@ export const About = () => {
                     </h2>
 
                     <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
-                        <p>
-                            I am an enthusiastic and self-driven Full Stack Developer with over 7 years of
-                            professional experience crafting high-impact digital products. My journey has evolved
-                            into deep expertise across the modern web stack, specializing in TypeScript, React,
-                            Next.js, and Node.js, while maintaining proficiency in Python (Django) and PHP
-                            (Laravel).
-                        </p>
-                        <p>
-                            I specialize in building everything from sleek, AI-powered e-commerce applications to
-                            complex enterprise platforms and cybersecurity tools. My approach blends technical
-                            excellence with a strong background in UI/UX implementation, frequently converting
-                            complex Figma designs into interactive, user-centric interfaces. Beyond frontend
-                            excellence, I have a proven track record in DevOps and infrastructure, managing
-                            deployments on Amazon Web Services, Microsoft Azure, Oracle Cloud, and Digital Ocean, and
-                            automating critical backend processes
-                            to ensure system reliability.
-                        </p>
+                        {/*<p>*/}
+                        {/*    I am an enthusiastic and self-driven Full Stack Developer with over 7 years of*/}
+                        {/*    professional experience crafting high-impact digital products. My journey has evolved*/}
+                        {/*    into deep expertise across the modern web stack, specializing in TypeScript, React,*/}
+                        {/*    Next.js, and Node.js, while maintaining proficiency in Python (Django) and PHP*/}
+                        {/*    (Laravel).*/}
+                        {/*</p>*/}
+                        {/*<p>*/}
+                        {/*    I specialize in building everything from sleek, AI-powered e-commerce applications to*/}
+                        {/*    complex enterprise platforms and cybersecurity tools. My approach blends technical*/}
+                        {/*    excellence with a strong background in UI/UX implementation, frequently converting*/}
+                        {/*    complex Figma designs into interactive, user-centric interfaces. Beyond frontend*/}
+                        {/*    excellence, I have a proven track record in DevOps and infrastructure, managing*/}
+                        {/*    deployments on Amazon Web Services, Microsoft Azure, Oracle Cloud, and Digital Ocean, and*/}
+                        {/*    automating critical backend processes*/}
+                        {/*    to ensure system reliability.*/}
+                        {/*</p>*/}
                         <p>
                             When I'm not coding, you'll find me exploring new technologies or diving into deep
                             conversations about tech with friends—whether they’re fellow developers or
