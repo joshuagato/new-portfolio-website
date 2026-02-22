@@ -1,14 +1,15 @@
 import WhatsApp from '../../public/whatsapp.svg';
 import {Facebook, Github, Linkedin, Mail, MailsIcon, MapPin, Phone, PhoneCallIcon, Twitter} from "lucide-react";
+import {FaWhatsapp} from 'react-icons/fa';
 
-export const WhatsAppExport = WhatsApp;
+export const WhatsAppExport = FaWhatsapp;
 export const PhoneCallIconExport = PhoneCallIcon;
 
 export const socialLinks = [
     {icon: MailsIcon, href: "mailTo:joshuagato37@gmail.com", label: "Email"},
     {icon: PhoneCallIcon, href: "tel: +233278223838", label: "Call"},
     {
-        icon: WhatsApp,
+        icon: FaWhatsapp,
         href: "https://api.whatsapp.com/send/?phone=233278223838&text&type=phone_number&app_absent=0",
         label: "WhatsApp"
     },

@@ -68,11 +68,7 @@ export const Hero = () => {
                            href="https://api.whatsapp.com/send/?phone=233278223838&text&type=phone_number&app_absent=0">
                             <Button size="lg">
                                 WhatsApp Me
-                                <img
-                                    src={WhatsAppExport}
-                                    alt={'WhatsApp Icon'}
-                                    className="w-5 h-5 object-contain"
-                                />
+                                <WhatsAppExport  className="w-5 h-5" />
                             </Button>
                         </a>
                         <a target={"_blank"}
