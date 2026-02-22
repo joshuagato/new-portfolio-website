@@ -33,11 +33,11 @@ export const Navbar = () => {
             <div className="hidden md:flex items-center gap-1">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {headerAndFooterLinks.map((link, index) => (<a
-                        target={link.label === 'Old Portfolio' ? "_blank" : ''}
+                        target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
                         href={link.href}
                         key={index}
                         className={`px-4 py-2 text-sm rounded-full hover:bg-surface transition-colors ${
-                            link.label === 'Old Portfolio'
+                            link.label === 'Old Portfolio Website'
                                 ? "text-red-500 hover:text-red-600"
                                 : "text-muted-foreground hover:text-foreground"
                         }`}
@@ -75,9 +75,9 @@ export const Navbar = () => {
                     href={link.href}
                     key={index}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    target={link.label === 'Old Portfolio' ? "_blank" : ''}
+                    target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
                     className={`px-4 py-2 text-lg rounded-full hover:bg-surface transition-colors ${
-                        link.label === 'Old Portfolio'
+                        link.label === 'Old Portfolio Website'
                             ? "text-red-500 hover:text-red-600"
                             : "text-muted-foreground hover:text-foreground"
                     }`}
@@ -87,7 +87,7 @@ export const Navbar = () => {
 
                 <a href="tel: +233278223838" className="block w-full">
                     <Button onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-                        Call Me
+                        Call Me <PhoneCallIconExport className="w-4 h-4"/>
                     </Button>
                 </a>
             </div>
