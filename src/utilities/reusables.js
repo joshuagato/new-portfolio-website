@@ -25,7 +25,7 @@ export const headerAndFooterLinks = [
     {href: "#experience", label: "Experience"},
     {href: "#testimonials", label: "Testimonials"},
     {href: "#contact", label: "Contact"},
-    {href: "https://joshuagato.github.io?ref=joshuagato.online", label: "Old Portfolio Website"},
+    {href: "https://joshuagato.github.io?ref=joshuagato.online", label: "My Old Website"},
 ];
 
 export const myFullName = "Joshua Gato";

@@ -20,11 +20,11 @@ export const Footer = () => {
                     {/* Links */}
                     <nav className="flex flex-wrap justify-center lg:gap-6">
                         {headerAndFooterLinks.map((link, index) => (<a
-                            target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
+                            target={link.label === 'My Old Website' ? "_blank" : ''}
                             href={link.href}
                             key={index}
                             className={`px-4 py-2 text-sm rounded-full hover:bg-surface transition-colors ${
-                                link.label === 'Old Portfolio Website'
+                                link.label === 'My Old Website'
                                     ? "text-red-500 hover:text-red-600"
                                     : "text-muted-foreground hover:text-foreground"
                             }`}

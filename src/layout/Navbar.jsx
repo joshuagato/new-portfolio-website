@@ -33,11 +33,11 @@ export const Navbar = () => {
             <div className="hidden lg:flex items-center gap-1">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {headerAndFooterLinks.map((link, index) => (<a
-                        target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
+                        target={link.label === 'My Old Website' ? "_blank" : ''}
                         href={link.href}
                         key={index}
                         className={`px-4 py-2 text-sm rounded-full hover:bg-surface transition-colors ${
-                            link.label === 'Old Portfolio Website'
+                            link.label === 'My Old Website'
                                 ? "text-red-500 hover:text-red-600"
                                 : "text-muted-foreground hover:text-foreground"
                         }`}
@@ -76,9 +76,9 @@ export const Navbar = () => {
                         href={link.href}
                         key={index}
                         onClick={() => setIsMobileMenuOpen(false)}
-                        target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
+                        target={link.label === 'My Old Website' ? "_blank" : ''}
                         className={`px-4 py-2 text-lg rounded-full hover:bg-surface transition-colors ${
-                            link.label === 'Old Portfolio Website'
+                            link.label === 'My Old Website'
                                 ? "text-red-500 hover:text-red-600"
                                 : "text-muted-foreground hover:text-foreground"
                         }`}
