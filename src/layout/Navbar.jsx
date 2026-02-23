@@ -1,5 +1,5 @@
 import {Button} from "@/components/Button";
-import {Download, Menu, X} from "lucide-react";
+import {Menu, X} from "lucide-react";
 import {useEffect, useState} from "react";
 import {headerAndFooterLinks, PhoneCallIconExport} from "@/utilities/reusables.js";
 
@@ -30,7 +30,7 @@ export const Navbar = () => {
             </a>
 
             {/* Desktop Nav */}
-            <div className="hidden md:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-1">
                 <div className="glass rounded-full px-2 py-1 flex items-center gap-1">
                     {headerAndFooterLinks.map((link, index) => (<a
                         target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
@@ -48,7 +48,7 @@ export const Navbar = () => {
             </div>
 
             {/* CTA Button */}
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <a target={'_blank'} href="tel: +233278223838">
                     <Button size="sm">
                         Call Me <PhoneCallIconExport className="w-4 h-4"/>
@@ -59,7 +59,7 @@ export const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-                className="md:hidden p-2 text-foreground cursor-pointer"
+                className="lg:hidden p-2 text-foreground cursor-pointer"
                 onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
                 {/*<a target={'_blank'} href="tel: +233278223838">*/}
@@ -69,28 +69,29 @@ export const Navbar = () => {
         </nav>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (<div className="md:hidden glass-strong animate-fade-in">
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
-                {headerAndFooterLinks.map((link, index) => (<a
-                    href={link.href}
-                    key={index}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
-                    className={`px-4 py-2 text-lg rounded-full hover:bg-surface transition-colors ${
-                        link.label === 'Old Portfolio Website'
-                            ? "text-red-500 hover:text-red-600"
-                            : "text-muted-foreground hover:text-foreground"
-                    }`}
-                >
-                    {link.label}
-                </a>))}
+        {isMobileMenuOpen && (
+            <div className="lg:hidden glass-strong animate-fade-in">
+                <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+                    {headerAndFooterLinks.map((link, index) => (<a
+                        href={link.href}
+                        key={index}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
+                        className={`px-4 py-2 text-lg rounded-full hover:bg-surface transition-colors ${
+                            link.label === 'Old Portfolio Website'
+                                ? "text-red-500 hover:text-red-600"
+                                : "text-muted-foreground hover:text-foreground"
+                        }`}
+                    >
+                        {link.label}
+                    </a>))}
 
-                <a href="tel: +233278223838" className="block w-full">
-                    <Button onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-                        Call Me <PhoneCallIconExport className="w-4 h-4"/>
-                    </Button>
-                </a>
-            </div>
-        </div>)}
+                    <a href="tel: +233278223838" className="block w-full">
+                        <Button onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+                            Call Me <PhoneCallIconExport className="w-4 h-4"/>
+                        </Button>
+                    </a>
+                </div>
+            </div>)}
     </header>);
 };
