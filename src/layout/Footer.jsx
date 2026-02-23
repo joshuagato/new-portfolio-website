@@ -5,10 +5,10 @@ export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (<footer className="py-12 border-t border-border">
-            <div className="container mx-auto px-2 md:px-6">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="container mx-auto px-2 lg:px-6">
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                     {/* Logo & Copyright */}
-                    <div className="text-center md:text-left">
+                    <div className="text-center lg:text-left lg:flex lg:items-center lg:gap-2">
                         <a href="/" className="text-xl font-bold tracking-tight">
                             JG<span className="text-primary">.</span>
                         </a>
