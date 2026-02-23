@@ -33,7 +33,7 @@ export const myFullName = "Joshua Gato";
 export const contactInfo = [{
     icon: Mail, label: "Email", value: "joshuagato37@gmail.com", href: "mailto:joshuagato37@gmail.com",
 }, {
-    icon: Phone, label: "Phone", value: "+233 (278) 22-38-38", href: "tel:+233278223838",
+    icon: Phone, label: "Phone", value: "+233 (0) 278-22-38-38", href: "tel:+233278223838",
 }, {
     icon: MapPin, label: "Location", value: "Accra, Ghana", href: "#",
 },];
