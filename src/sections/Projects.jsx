@@ -1,13 +1,15 @@
 import {ArrowUpRight, Github} from "lucide-react";
 import {AnimatedBorderButton} from "@/components/AnimatedBorderButton";
 
+const sourceIdentifier = "?ref=joshuagato.online";
+
 const projects = [{
     title: "Spotified",
     description: "A Spotify clone. ",
     credentials: "To play music create an account or login with Email: joshuagato2@gmail.com Password: 3712@ITstd",
     image: "/projects/spotified.png",
     tags: ["REACT/REDUX", "NODE/EXPRESS", "GRAPHQL", "POSTGRESQL"],
-    link: "https://spotified.joshuagato.online?ref=joshuagato.online",
+    link: "https://spotified.joshuagato.online" + sourceIdentifier,
     github: "https://github.com/joshuagato/react-redux-node-express-graphql-spotified-app",
 }, {
     title: "Streamify",
@@ -15,21 +17,21 @@ const projects = [{
     credentials: "To see the App, create an account or login with Email: joshuagato2@gmail.com Password: 3712@ITstd",
     image: "/projects/streamify.png",
     tags: ["REACT/ZUSTAND", "NODE/EXPRESS", "REST API", "MONGODB"],
-    link: "https://streamify.joshuagato.online?ref=joshuagato.online",
+    link: "https://streamify.joshuagato.online" + sourceIdentifier,
     github: "https://github.com/joshuagato/react-node-vite-tailwindcss-getstream-tanstack-daisyui-zustand-lucide-streamify-chat-video-call-app",
 }, {
     title: "The Furniture Store",
     description: "An AI shop powered by Vercel AI, helping users search for products smarter faster.",
     image: "/projects/aiecommerce.png",
     tags: ["NEXT/TS", "CLERK/SANITY", "ZUSTAND", "VERCEL-AI"],
-    link: "https://joshua-gato-aiecommerce.netlify.app?ref=joshuagato.online",
+    link: "https://joshua-gato-aiecommerce.netlify.app" + sourceIdentifier,
     github: "https://github.com/joshuagato/next-tailwindcss-clerk-sanity-shadcn-lucide-vercelai-furniture-ai-ecommerce-app",
 }, {
     title: "Droply",
     description: "A dropbox clone: for saving files in folders in the cloud",
     image: "/projects/droply.png",
     tags: ["NEXT/TS", "DRIZZLE", "MongoDB", "Redis"],
-    link: "https://joshua-gato-droply-app.netlify.app?ref=joshuagato.online",
+    link: "https://joshua-gato-droply-app.netlify.app" + sourceIdentifier,
     github: "https://github.com/joshuagato/next-clerk-drizzle-neon-heroui-imagekit-zod-react_hook_forms-droply-app",
 }, {
     title: "3Ninjas",
@@ -37,7 +39,7 @@ const projects = [{
     credentials: "To see the Admin Dashboard, you can login with Phone number: 0242401113 Password: 12345678",
     image: "/projects/3ninjas.png",
     tags: ["VUE/VITE", "TAILWINDCSS", "MYSQL", "PHP/LARAVEL"],
-    link: "https://threeninjas.joshuagato.online?ref=joshuagato.online",
+    link: "https://threeninjas.joshuagato.online" + sourceIdentifier,
     github: "https://github.com/joshuagato/3ninjas_laravel_vue_tailwindcss_vite_mysql",
 }, {
     title: "Amazoned",
@@ -45,7 +47,7 @@ const projects = [{
     credentials: "To see the Admin Dashboard, you can login with Phone number: 0242401113 Password: 12345678",
     image: "/projects/bbcom.png",
     tags: ["VUE/VUEX", "MIX/BOOTSTRAP", "MYSQL", "PHP/LARAVEL"],
-    link: "https://laravueecommerce.joshuagato.online?ref=joshuagato.online",
+    link: "https://laravueecommerce.joshuagato.online" + sourceIdentifier,
     github: "https://github.com/joshuagato/ecommerce_laravel_vue_bootstrap_mix_mysql",
 }, {
     title: "Twitter Clone",
@@ -53,7 +55,7 @@ const projects = [{
     credentials: "You create an account or login with Email: joshuagato Password: some@Password",
     image: "/projects/twitter.png",
     tags: ["NUXT/TS", "PRISMA/SUPABASE", "MONGODB", "TAILWINDCSS"],
-    link: "https://twitter.joshuagato.online?ref=joshuagato.online",
+    link: "https://twitter.joshuagato.online" + sourceIdentifier,
     github: "https://github.com/joshuagato/nuxt-tailwindcss-primsa-bcrypt-formidable-cloudinary-twitter-clone-app",
 }, {
     title: "AliExpress Clone",
@@ -61,7 +63,7 @@ const projects = [{
     credentials: "To see the Admin Dashboard, you can login with Phone number: 0242401113 Password: 12345678",
     image: "/projects/aliexpressclone.png",
     tags: ["NUXT/TS", "PRISMA/SUPABASE", "POSTGRESQL", "STRIPE"],
-    link: "https://aliexpressclone.joshuagato.online?ref=joshuagato.online",
+    link: "https://aliexpressclone.joshuagato.online" + sourceIdentifier,
     github: "https://github.com/joshuagato/nuxt-tailwindcss-pinia-supabase-prisma-stripe-aliexpress-clone-app",
 },];
 
