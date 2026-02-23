@@ -5,7 +5,7 @@ export const Footer = () => {
     const currentYear = new Date().getFullYear();
 
     return (<footer className="py-12 border-t border-border">
-            <div className="container mx-auto px-6">
+            <div className="container mx-auto px-2 md:px-6">
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                     {/* Logo & Copyright */}
                     <div className="text-center md:text-left">
@@ -18,7 +18,7 @@ export const Footer = () => {
                     </div>
 
                     {/* Links */}
-                    <nav className="flex flex-wrap justify-center gap-6">
+                    <nav className="flex flex-wrap justify-center lg:gap-6">
                         {headerAndFooterLinks.map((link, index) => (<a
                             target={link.label === 'Old Portfolio Website' ? "_blank" : ''}
                             href={link.href}
@@ -34,7 +34,7 @@ export const Footer = () => {
                     </nav>
 
                     {/* Social Links */}
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-3">
                         {socialLinks.map((social) => (<a
                                 key={social.label}
                                 href={social.href}
@@ -43,15 +43,7 @@ export const Footer = () => {
                                 title={social.label}
                                 className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
                             >
-                            {social.label === "WhatsApp" ? (
-                                <img
-                                    src={social.icon.src || social.icon}
-                                    alt={social.label}
-                                    className="w-5 h-5 object-contain"
-                                />
-                            ) : (
                                 <social.icon className="w-5 h-5" />
-                            )}
                             </a>))}
                     </div>
                 </div>
